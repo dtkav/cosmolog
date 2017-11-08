@@ -135,4 +135,4 @@ mapped to in the log output:
 ## Development
 
     pip install -e .[test]
-    py.test
+    tox
