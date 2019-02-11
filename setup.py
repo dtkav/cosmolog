@@ -15,26 +15,16 @@
 # the License.
 
 import os
-import versioneer
 
 from setuptools import distutils, find_packages, setup
 
 
-def get_version():
-    if os.path.exists('PKG-INFO'):
-        metadata = distutils.dist.DistributionMetadata('PKG-INFO')
-        return metadata.version
-    else:
-        return versioneer.get_version()
-
-
-setup(name='cosmolog',
-      version=versioneer.get_version(),
-      cmdclass=versioneer.get_cmdclass(),
-      description='cosmolog: structured python logger',
-      url='https://github.com/planetlabs/cosmolog',
-      author='Isil Demir',
-      author_email='isil@planet.com',
+setup(name='cosmolog-dtkav',
+      version='0.0.4',
+      description='cosmolog fork: do not use',
+      url='https://github.com/dtkav/cosmolog',
+      author='Isil Demir + Daniel Grossmann-Kavanagh',
+      author_email='me@danielgk.com',
       packages=find_packages(exclude=['tests']),
       install_requires=[
           'click>=6.3',
